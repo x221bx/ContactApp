@@ -1,0 +1,85 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button_sheet_shape"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <!-- Name Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#E2F4F6"
+        app:counterTextColor="@color/offWhite"
+        app:boxStrokeColor="@color/secondary"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="@string/name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botton_shap"
+            android:textColorHint="#E2F4F6"
+            android:textColor="@color/offWhite"
+            android:textSize="20sp"
+            app:boxStrokeColor="@color/secondary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#E2F4F6"
+        app:endIconMode="clear_text"
+        app:counterTextColor="@color/offWhite"
+        app:layout_constraintTop_toBottomOf="@+id/name_field"
+        android:hint="@string/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/offWhite"
+            android:textSize="20sp"
+            android:background="@drawable/botton_shap" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Phone Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_field"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#E2F4F6"
+        app:boxStrokeColor="#FFF1D4"
+        app:endIconMode="clear_text"
+        app:layout_constraintTop_toBottomOf="@+id/email_field"
+        android:hint="@string/phone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/offWhite"
+            android:textSize="20sp"
+            android:background="@drawable/botton_shap"
+            app:boxStrokeColor="#FFF1D4" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Submit Button (enter_user) -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enter_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_enter_user"
+        android:text="@string/enter_user"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phone_field" />
+</androidx.constraintlayout.widget.ConstraintLayout>

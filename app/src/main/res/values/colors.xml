@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="inputTextColor">#E2F4F6</color>
+    <color name="primary">#FFF1D4</color>
+    <color name="onPrimary">#29384D</color>
+    <color name="secondary">#FFF1D4</color>
+    <color name="onSecondary">#29384D</color>
+    <color name="background">#29384D</color>
+    <color name="onBackground">#FFF1D4</color>
+    <color name="offWhite">#FFF1D4</color>
+</resources>
