@@ -1,15 +1,15 @@
-package com.example.contactappa.activities
+package com.example.contactappa.ui.activities
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.contactappa.dialogs.AddContactDialog
 import com.example.contactappa.models.Contact
 import com.example.contactappa.adapters.ContactAdapter
 import com.example.contactappa.viewmodels.ContactViewModel
 import com.example.contactappa.databinding.ActivityContactBinding
+import com.example.contactappa.ui.dialogs.AddContactDialog
 
 class ContactActivity : AppCompatActivity() {
     private lateinit var binding: ActivityContactBinding

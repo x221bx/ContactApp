@@ -1,4 +1,4 @@
-package com.example.contactappa.dialogs
+package com.example.contactappa.ui.dialogs
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.example.contactappa.activities
+package com.example.contactappa.ui.activities
 
 import android.content.Intent
 import android.os.Bundle
