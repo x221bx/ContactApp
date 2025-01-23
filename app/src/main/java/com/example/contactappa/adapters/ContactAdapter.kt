@@ -1,4 +1,4 @@
-package com.example.contactappa
+package com.example.contactappa.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.contactappa.databinding.ItemContactBinding
-class ContactAdapter(private val onDelete: (Contact) -> Unit) : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(ContactDiffCallback()) {
+import com.example.contactappa.models.Contact
 
+class ContactAdapter(private val onDelete: (Contact) -> Unit) : ListAdapter<Contact, ContactAdapter.ContactViewHolder>(ContactDiffCallback()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactViewHolder {
         val binding = ItemContactBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ContactViewHolder(binding)
@@ -15,7 +16,6 @@ class ContactAdapter(private val onDelete: (Contact) -> Unit) : ListAdapter<Cont
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         holder.bind(getItem(position), onDelete)
     }
-
     class ContactViewHolder(private val binding: ItemContactBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(contact: Contact, onDelete: (Contact) -> Unit) {
             binding.personName.text = contact.name
@@ -26,7 +26,6 @@ class ContactAdapter(private val onDelete: (Contact) -> Unit) : ListAdapter<Cont
             }
         }
     }
-
     class ContactDiffCallback : DiffUtil.ItemCallback<Contact>() {
         override fun areItemsTheSame(oldItem: Contact, newItem: Contact): Boolean {
             return oldItem.email == newItem.email // Assuming email is unique

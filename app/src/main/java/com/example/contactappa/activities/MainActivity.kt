@@ -1,5 +1,4 @@
-
-package com.example.contactappa
+package com.example.contactappa.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.root.postDelayed({
             startActivity(Intent(this, ContactActivity::class.java))
             finish()
